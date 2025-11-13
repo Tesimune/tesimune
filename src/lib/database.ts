@@ -167,6 +167,7 @@ export const skills = {
     'Flask',
     'FastAPI',
     'Spring Boot',
+    'Ruby on Rails',
   ],
   database: ['MySQL', 'PostgreSQL', 'MariaDB', 'MongoDB', 'Redis', 'Firebase'],
   devops: ['Git', 'Docker', 'AWS', 'Google Console', 'Azure', 'CI/CD'],
