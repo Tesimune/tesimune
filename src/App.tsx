@@ -2,10 +2,10 @@
 
 import './App.css';
 import {useEffect, useState} from 'react';
+import {projects} from '@/lib/data/projects';
+import {experiences} from '@/lib/data/experiences';
+import {cloudStack, coreStack} from "@/lib/data/skills.ts";
 import {ArrowUp, ExternalLink, Github, Linkedin, Mail, Menu, X,} from 'lucide-react';
-import {projects} from './data/projects';
-import {experiences} from './data/experiences';
-import {skills} from './data/skills';
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,16 +33,16 @@ function App() {
                     </a>
 
                     <div className='hidden md:flex items-center gap-8'>
-                        <a href='#home' className='hover:text-zinc-400 transition-colors'>
+                        <a href='/#home' className='hover:text-zinc-400 transition-colors'>
                             Home
                         </a>
-                        <a href='#works' className='hover:text-zinc-400 transition-colors'>
+                        <a href='/#works' className='hover:text-zinc-400 transition-colors'>
                             Works
                         </a>
-                        <a href='#skills' className='hover:text-zinc-400 transition-colors'>
+                        <a href='/#skills' className='hover:text-zinc-400 transition-colors'>
                             Skills
                         </a>
-                        <a href='#about' className='hover:text-zinc-400 transition-colors'>
+                        <a href='/#about' className='hover:text-zinc-400 transition-colors'>
                             About
                         </a>
                         <a
@@ -65,16 +65,16 @@ function App() {
                 {isMenuOpen && (
                     <div className='md:hidden bg-[#0a0a0a] border-t border-zinc-800 px-6 py-4'>
                         <div className='flex flex-col gap-4'>
-                            <a href='#home' onClick={() => setIsMenuOpen(false)}>
+                            <a href='/#home' onClick={() => setIsMenuOpen(false)}>
                                 Home
                             </a>
-                            <a href='#works' onClick={() => setIsMenuOpen(false)}>
+                            <a href='/#works' onClick={() => setIsMenuOpen(false)}>
                                 Works
                             </a>
-                            <a href='#skills' onClick={() => setIsMenuOpen(false)}>
+                            <a href='/#skills' onClick={() => setIsMenuOpen(false)}>
                                 Skills
                             </a>
-                            <a href='#about' onClick={() => setIsMenuOpen(false)}>
+                            <a href='/#about' onClick={() => setIsMenuOpen(false)}>
                                 About
                             </a>
                             <a
@@ -169,9 +169,7 @@ function App() {
                                                 <span
                                                     key={i}
                                                     className='text-xs px-2 py-1 bg-zinc-800 rounded-full text-zinc-300'
-                                                >
-                          {tag}
-                        </span>
+                                                >{tag}</span>
                                             ))}
                                         </div>
                                     </div>
@@ -198,36 +196,60 @@ function App() {
             </section>
 
             {/* Skills & Technologies Section */}
-            <section id='skills' className='py-24 px-6 bg-zinc-900/30'>
-                <div className='max-w-7xl mx-auto'>
-                    <h2 className='text-3xl md:text-4xl font-bold mb-12'>
+            <section id="skills" className="py-24 px-6 bg-zinc-900/30">
+                <div className="max-w-7xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-12">
                         Skills & Technologies
                     </h2>
 
-                    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                        {skills.map((category) => (
-                            <div
-                                key={category.id}
-                                className='bg-zinc-900 border border-zinc-800 rounded-lg p-6'
-                            >
-                                <div className='flex items-center gap-3 mb-4'>
-                                    <h3 className='text-xl font-bold'>{category.category}</h3>
+                    {/* Core Stack */}
+                    <div className="mb-16">
+                        <h3 className="text-zinc-400 text-sm uppercase tracking-wider mb-6">
+                            Core Stack • Databases
+                        </h3>
+
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {coreStack.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="w-14 h-14 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:scale-110 transition-transform duration-200"
+                                    title={tech.name}
+                                >
+                                    <img
+                                        src={tech.src}
+                                        alt={tech.name}
+                                        className="max-w-8 max-h-8 object-contain"
+                                    />
                                 </div>
-                                <div className='flex flex-wrap gap-2'>
-                                    {category.items.map((skill, i) => (
-                                        <span
-                                            key={i}
-                                            className='px-3 py-1 bg-zinc-800 text-zinc-300 rounded-md text-sm'
-                                        >
-                      {skill}
-                    </span>
-                                    ))}
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Cloud & DevOps */}
+                    <div>
+                        <h3 className="text-zinc-400 text-sm uppercase tracking-wider mb-6">
+                            Cloud • DevOps
+                        </h3>
+
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {cloudStack.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="w-14 h-14 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:scale-110 transition-transform duration-200"
+                                    title={tech.name}
+                                >
+                                    <img
+                                        src={tech.src}
+                                        alt={tech.name}
+                                        className="max-w-8 max-h-8 object-contain"
+                                    />
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
+
 
             {/* About Section */}
             <section id='about' className='py-24 px-6 bg-zinc-900/50'>
@@ -296,17 +318,17 @@ function App() {
                 <div className='max-w-7xl mx-auto'>
                     <div className='flex flex-col md:flex-row justify-between items-center gap-6'>
                         <div className='flex items-center gap-8'>
-                            <a href='#home' className='hover:text-zinc-400 transition-colors'>
+                            <a href='/#home' className='hover:text-zinc-400 transition-colors'>
                                 Home
                             </a>
                             <a
-                                href='#about'
+                                href='/#about'
                                 className='hover:text-zinc-400 transition-colors'
                             >
                                 About
                             </a>
                             <a
-                                href='#works'
+                                href='/#works'
                                 className='hover:text-zinc-400 transition-colors'
                             >
                                 Works
