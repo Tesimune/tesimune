@@ -4,7 +4,7 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import {projects} from '@/lib/data/projects';
 import {experiences} from '@/lib/data/experiences';
-import {cloudStack, coreStack} from "@/lib/data/skills.ts";
+import {cloudStack, coreStack, database} from "@/lib/data/skills.ts";
 import {ArrowUp, ExternalLink, Github, Linkedin, Mail, Menu, X,} from 'lucide-react';
 
 function App() {
@@ -164,14 +164,14 @@ function App() {
                                         <p className='text-zinc-400 text-sm mb-4'>
                                             {project.description}
                                         </p>
-                                        <div className='flex flex-wrap gap-2'>
-                                            {project.tags.map((tag, i) => (
-                                                <span
-                                                    key={i}
-                                                    className='text-xs px-2 py-1 bg-zinc-800 rounded-full text-zinc-300'
-                                                >{tag}</span>
-                                            ))}
-                                        </div>
+                                        {/*<div className='flex flex-wrap gap-2'>*/}
+                                        {/*    {project.tags.map((tag, i) => (*/}
+                                        {/*        <span*/}
+                                        {/*            key={i}*/}
+                                        {/*            className='text-xs px-2 py-1 bg-zinc-800 rounded-full text-zinc-300'*/}
+                                        {/*        >{tag}</span>*/}
+                                        {/*    ))}*/}
+                                        {/*</div>*/}
                                     </div>
                                 </a>
                             </div>
@@ -205,11 +205,34 @@ function App() {
                     {/* Core Stack */}
                     <div className="mb-16">
                         <h3 className="text-zinc-400 text-sm uppercase tracking-wider mb-6">
-                            Core Stack • Databases
+                            Core Stack • Frameworks
                         </h3>
 
                         <div className="flex flex-wrap justify-center gap-6">
                             {coreStack.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="w-14 h-14 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:scale-110 transition-transform duration-200"
+                                    title={tech.name}
+                                >
+                                    <img
+                                        src={tech.src}
+                                        alt={tech.name}
+                                        className="max-w-8 max-h-8 object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Databases & ORM */}
+                    <div className="mb-16">
+                        <h3 className="text-zinc-400 text-sm uppercase tracking-wider mb-6">
+                            Database
+                        </h3>
+
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {database.map((tech) => (
                                 <div
                                     key={tech.name}
                                     className="w-14 h-14 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:scale-110 transition-transform duration-200"
