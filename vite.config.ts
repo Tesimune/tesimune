@@ -13,7 +13,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/tesimune',
+  base: '/tesimune/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
