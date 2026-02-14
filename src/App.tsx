@@ -241,7 +241,7 @@ function App() {
           {/* Databases & ORM */}
           <div className='mb-16'>
             <h3 className='text-zinc-400 text-sm uppercase tracking-wider mb-6'>
-              Database
+              SQL • NOSQL
             </h3>
 
             <div className='flex flex-wrap justify-center gap-6'>
