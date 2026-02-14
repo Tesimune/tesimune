@@ -9,8 +9,9 @@
 <p align="left">
   <b>Software Engineer/Developer</b> with 7+ years of experience building scalable, high-performance systems. 
   <br><br>
-  I specialize in architecting end-to-end solutions using <b>TypeScript, Python, and PHP</b>. Beyond writing code, I am passionate about <b>modernizing
-  infrastructure</b>, streamlining <b>CI/CD pipelines</b>, and leveraging <b>cloud-native automation</b> to bridge the gap between development and operations.
+  I specialize in architecting end-to-end solutions using <b>JavaScript/TypeScript, Python, and PHP</b>. 
+  Beyond writing code, I am passionate about <b>modernizing infrastructure</b>, streamlining <b>CI/CD pipelines</b>, 
+  and leveraging <b>cloud-native automation</b> to bridge the gap between development and operations.
 </p>
 
 ###

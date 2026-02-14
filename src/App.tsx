@@ -218,7 +218,7 @@ function App() {
           {/* Core Stack */}
           <div className='mb-16'>
             <h3 className='text-zinc-400 text-sm uppercase tracking-wider mb-6'>
-              Core Stack • Frameworks
+              Core Stack
             </h3>
 
             <div className='flex flex-wrap justify-center gap-6'>
