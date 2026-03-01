@@ -110,10 +110,7 @@ function App() {
           <div className='grid md:grid-cols-2 gap-12 items-center'>
             <div>
               <p className='text-zinc-400 mb-4'>Based in Nigeria (UTC +1)</p>
-              <p className='text-zinc-300 mb-6 leading-relaxed'>
-                Independent, results-driven Software Engineer with more than
-                seven years of professional experience.
-              </p>
+              <p className='text-zinc-300 mb-6 leading-relaxed'></p>
               <p className='text-zinc-400 mb-8'>
                 email me:{' '}
                 <a
@@ -124,13 +121,12 @@ function App() {
                 </a>
               </p>
               <h1 className='text-4xl md:text-6xl font-bold leading-tight text-balance'>
-                Hey there! I’m a Full-Stack Software Engineer with over seven
-                years of experience.
+                Results-driven Software Engineer with over seven years of
+                professional experience.
               </h1>
               <p className='text-zinc-400 mt-6 leading-relaxed'>
-                I specialize in building scalable web applications using modern
-                technologies, from frontend frameworks to backend services and
-                cloud infrastructure.
+                I specialize in building scalable applications using modern
+                technologies, frameworks and cloud infrastructure.
               </p>
             </div>
             <div className='relative aspect-square'>
@@ -148,7 +144,7 @@ function App() {
       <section id='works' className='py-24 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='flex items-center justify-between mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold'>Recent works</h2>
+            <h2 className='text-3xl md:text-4xl font-bold'>Recent Works</h2>
           </div>
 
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -170,21 +166,13 @@ function App() {
                     />
                   </div>
                   <div className='p-6'>
-                    <h3 className='text-xl font-bold mb-2 group-hover:text-zinc-400 transition-colors flex items-center gap-2'>
+                    <h3 className='text-xl font-bold uppercase mb-2 group-hover:text-zinc-400 transition-colors flex items-center gap-2'>
                       {project.title}
                       <ExternalLink className='w-4 h-4' />
                     </h3>
                     <p className='text-zinc-400 text-sm mb-4'>
                       {project.description}
                     </p>
-                    {/*<div className='flex flex-wrap gap-2'>*/}
-                    {/*    {project.tags.map((tag, i) => (*/}
-                    {/*        <span*/}
-                    {/*            key={i}*/}
-                    {/*            className='text-xs px-2 py-1 bg-zinc-800 rounded-full text-zinc-300'*/}
-                    {/*        >{tag}</span>*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
                   </div>
                 </a>
               </div>
@@ -289,7 +277,6 @@ function App() {
       {/* About Section */}
       <section id='about' className='py-24 px-6 bg-zinc-900/50'>
         <div className='max-w-7xl mx-auto'>
-          <h2 className='text-2xl md:text-3xl font-bold mb-4'>About me</h2>
           <div className='grid md:grid-cols-2 gap-12 items-start'>
             <div className='relative aspect-4/5'>
               <img
@@ -301,8 +288,7 @@ function App() {
             <div>
               <h3 className='text-xl md:text-2xl font-bold mb-8 leading-relaxed'>
                 I have a proven track record in building scalable, dynamic, and
-                high-performance web & mobile applications. Specialized in both
-                frontend and backend development with expertise in modern
+                high-performance applications, with expertise in modern
                 frameworks and cloud technologies.
               </h3>
 
@@ -313,19 +299,20 @@ function App() {
                     <p className='text-xs text-zinc-500 mb-2'>{exp.type}</p>
                     <h4 className='text-lg font-bold'>{exp.role}</h4>
                     <p className='text-zinc-300'>{exp.company}</p>
-                    <p className='text-sm text-zinc-400 mt-2'>{exp.location}</p>
+                    <p className='text-sm text-zinc-400 mt-2'>
+                      {exp.description}
+                    </p>
                   </div>
                 ))}
               </div>
 
               <div className='mt-12 pt-8 border-t border-zinc-800'>
                 <p className='text-zinc-400 mb-4'>
-                  A skilled Full-Stack Software Engineer with over 7 years of
-                  experience.
+                  Software Engineer with over 7 years of experience.
                 </p>
                 <div className='space-y-2'>
                   <p className='text-sm'>
-                    <span className='text-zinc-400'>Contact (me)</span>
+                    <span className='text-zinc-400'>Contact (me@)</span>
                   </p>
                   <a
                     href='mailto:tesimune@gmail.com'
@@ -398,7 +385,7 @@ function App() {
             </div>
           </div>
           <div className='text-center mt-8 text-zinc-400 text-sm'>
-            ©2025 TESIMUNE
+            ©2026 TESIMUNE
           </div>
         </div>
       </footer>
